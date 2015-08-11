@@ -1,0 +1,14 @@
+= link_to "New Raffle", new_raffle_url
+%hr
+.raffles
+  - for raffle in @raffles
+    .raffle
+      %h1
+        = raffle.title
+      .winners
+        Winner
+        = raffle.winners.size == 1 ? '' : 's'
+        \:
+        = raffle.winners.collect { |user| user.name }.join(",")
+= will_paginate @raffles
+

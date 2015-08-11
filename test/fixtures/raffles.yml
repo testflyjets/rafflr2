@@ -1,0 +1,34 @@
+# == Schema Information
+# Schema version: 20081226010020
+#
+# Table name: raffles
+#
+#  id                :integer(4)      not null, primary key
+#  title             :string(150)
+#  created_on        :datetime
+#  number_of_winners :integer(4)
+#
+
+# == Schema Information
+# Schema version: 2
+#
+# Table name: raffles
+#
+#  id         :integer(11)   not null, primary key
+#  title      :string(150)   
+#  created_on :datetime      
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  title: First Raffl
+  created_on: <%= Date.parse("01/01/2006") %>
+  number_of_winners: 1
+  
+two:
+  id: 2
+  title: Second Raffle
+  created_on: <%= Date.parse("01/01/2006") %>
+  number_of_winners: 2
+

@@ -1,0 +1,18 @@
+%script{:type => "application/javascript"}
+  :plain
+    var timeout = setTimeout(process_client_side, 2000);
+    soundManager.onload = function() {
+      //playMusic('/songs/Jeopardy.mp3');
+    }
+%h2
+  Just Testing
+#users
+  - 1.upto 2 do |i|
+    .users{ :id => "user_#{i}" }
+      %div
+        Test
+        = i
+%input#number_of_winners{ :name => "number_of_winners", :type => "hidden", :value => "1" }
+%br{ :style => "clear: both;" }
+#debug{ :style => "display: none; width: 100%; height: 200px;" }
+

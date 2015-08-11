@@ -1,0 +1,18 @@
+%script
+  = next_round_js
+
+%span#new_raffle{ :style => "display: none;" }
+  = link_to 'New Raffle', new_raffle_path
+%h2
+  = h @raffle.title
+#users
+  - for user in @users
+    .users{ :id => "user_#{user.id}" }
+      %div
+        = h user.name
+%input#number_of_winners{ :name => "number_of_winners", :type => "hidden", :value => @raffle.number_of_winners }
+- # Fireworks aren't displaying when image loads are slow so get a move-on early
+%div{ :style => "display: none;" }
+  - 0.upto(20) do |i|
+    %img{ :src => "/images/fireworks/fw0/#{i}.gif" }
+

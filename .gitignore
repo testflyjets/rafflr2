@@ -1,0 +1,10 @@
+log/**/*
+log/development.log
+tmp/**/*
+db/schema.rb
+db/*.sqlite3
+.loadpath
+.project
+
+raffle_names.txt
+rubymine_names.txt
